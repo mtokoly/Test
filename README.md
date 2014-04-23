@@ -1,1 +1,8 @@
-THIS IS A TEST 3
+THIS IS A TEST 
+
+```
+function something()
+{
+    echo 'this is a test';
+}
+```
