@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Test Site</title>
     <meta name="viewport" content="width=1024">
-    <link rel="stylesheet" href="http://localhost/projects/test/assets/css/normalize.css" />
-    <link rel="stylesheet" href="http://localhost/projects/test/assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
@@ -22,9 +22,20 @@
 
 <div id="main">
 	<div id="content"></div>
-	<div id="footer"></div>
+	<div id="footer">
+		<p>&copy; <?php echo date('Y'); ?> RIPPIN'</p>
+		<ul>
+			<li><a href="#" class="accent">Open Shop</a></li>
+			<li><a href="#">Blog</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">Terms</a></li>
+			<li><a href="#">Privacy</a></li>
+			<li><a href="#">Copyright</a></li>
+		</ul>
+	</div>
 </div>
 
-<script src="http://localhost/projects/test/assets/js/scripts.js"></script>
+<script src="./assets/js/scripts.js"></script>
 </body>
 </html>
