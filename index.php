@@ -23,9 +23,9 @@
 <div id="main">
 	<div id="content"></div>
 	<div id="footer">
-		<p>&copy; <?php echo date('Y'); ?> RIPPIN'</p>
+		<p>&copy; <?php echo date('Y'); ?> Example</p>
 		<ul>
-			<li><a href="#" class="accent">Open Shop</a></li>
+			<li><a href="#" class="accent">Accented</a></li>
 			<li><a href="#">Blog</a></li>
 			<li><a href="#">About</a></li>
 			<li><a href="#">Contact</a></li>
