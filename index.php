@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Test Site</title>
     <meta name="viewport" content="width=1024">
+    <!-- <link rel="shortcut icon" href="./assets/images/favicon.ico"> -->
     <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./assets/css/normalize.css" />
@@ -21,12 +22,16 @@
 		<input type="submit" value="Search">
 	</form>
 	<ul class="nav nav-cart">
-		<li class="cart"><a href="#">Cart <span class="count active">1</span></a></li>
+		<li class="cart"><a href="#">Cart <span class="count">1</span></a></li>
 	</ul>
 	<ul class="nav">
 		<li><a href="#">Home</a></li>
 		<li><a href="#">Explore</a></li>
 		<li><a href="#">Sell</a></li>
+	</ul>-
+	<ul class="nav-account">
+		<li class="messages"><a href="#">Messages</a></li>
+		<li class="profile"><a href="javascript:void(0)"><img src="./assets/images/dev/matt.jpg"></a></li>
 	</ul>
 </div></div>
 <!-- [END] Topbar -->
@@ -38,7 +43,7 @@
 
 <div id="container">
 	<div id="content-wrap"><div id="content">
-		Content
+		<?php include('content.php'); ?>
 	</div></div>
 	<!-- [END] Content -->
 </div>

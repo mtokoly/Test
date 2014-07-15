@@ -42,6 +42,7 @@ li {
 html {
 	font: 14px/20px "Roboto", sans-serif;
 	color: #5f5f5f;
+	min-width: 1024px;
 }
 
 html,
@@ -72,14 +73,14 @@ body {
 	height: 5px;
 	background: #000;
 }
-
+/*
 #topbar-wrap:after {
 	top: auto;
 	bottom: 1px;
 	height: 1px;
 	border-bottom: 1px dashed #616161;
 }
-
+*/
 #menulink {
 	display: block;
 	box-sizing: border-box;
@@ -176,10 +177,13 @@ body.menu-regular-active.menu-regular-min-inactive #menulink span.arrow {
 }
 
 #topbar form.search {
-	position: absolute;
-	top: 17px;
-	left: 220px;
-	width: 360px;
+	position: relative;
+	float: left;
+	margin: 17px 0 0 220px;
+	/*
+	width: 370px;
+	*/
+	width: 33%; 
 	height: 28px;
 }
 
@@ -225,9 +229,8 @@ body.menu-regular-active.menu-regular-min-inactive #menulink span.arrow {
 }
 
 #topbar ul.nav {
-	position: absolute;
-	top: 23px;
-	left: 592px;
+	float: left;
+	margin: 22px 0 0 12px;
 	/*
 	float: right;
 	margin-top: 22px;
@@ -249,7 +252,7 @@ body.menu-regular-active.menu-regular-min-inactive #menulink span.arrow {
 
 #topbar ul.nav li a {
 	display: block;
-	font: 11px/13px "Roboto Condensed", sans-serif;
+	font: 12px/14px "Roboto Condensed", sans-serif;
 	color: #fff;
 	text-transform: uppercase;
 	text-shadow: 0px -1px 0px rgba(0,0,0, 0.5);
@@ -273,17 +276,89 @@ body.menu-regular-active.menu-regular-min-inactive #menulink span.arrow {
 }
 
 #topbar ul.nav-cart {
-	display: none;
-	margin-top: 20px;
-	margin-right: 40px;
-	margin-left: 20px;
-	padding-left: 18px;
-	height: 51px;
+	float: right;
+	margin: 21px 50px 0px 11px;
+	padding-left: 11px;
+	height: 20px;
 	border-left: 2px solid #D201BC;
 }
 
 #topbar ul.nav-cart li {
-	padding-top: 3px;
+	float: left;
+	text-indent: -9999em;
+	margin-top: -5px;
+}
+
+#topbar ul.nav-cart li a {
+	display: block;
+	position: relative;
+	width: 28px;
+	height: 28px;
+	background: #454545 url(../images/cart.png) no-repeat center center;
+	background-size: 16px 16px;
+	border-radius: 2px;
+}
+
+#topbar ul.nav-cart li a:hover {
+	box-shadow: inset 0px 1px 3px rgba(0,0,0, 0.25);
+}
+
+#topbar ul.nav-account {
+	float: right;
+	margin-top: 17px;
+}
+
+#topbar ul.nav-account li {
+	float: left;
+	text-indent: -9999em;
+	margin-left: 10px;
+}
+
+#topbar ul.nav-account li:first-child {
+	margin-left: 0px;
+}
+
+#topbar ul.nav-account li a {
+	display: block;
+	width: 28px;
+	height: 28px;
+	background: #333;
+	border-radius: 2px;
+}
+
+#topbar ul.nav-account li.messages a {
+	position: relative;
+	background: #454545 url(../images/messages.png) no-repeat center center;
+	background-size: 16px 16px;
+}
+
+#topbar ul.nav-account li.messages a:hover {
+	box-shadow: inset 0px 1px 3px rgba(0,0,0, 0.25);
+}
+
+#topbar ul.nav-cart li a span.count,
+#topbar ul.nav-account li a span.count {
+	display: block;
+	position: absolute;
+	top: -4px;
+	right: -5px;
+	font: bold 11px/15px sans-serif;
+	color: #fff;
+	text-align: center;
+	text-indent: 0px;
+	padding: 0px 4px;
+	background: #D201BC; 
+}
+
+#topbar ul.nav-account li.profile a img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 2px;
+}
+
+#topbar ul.nav-account li.profile a:hover {
+	box-shadow: 0px 0px 3px rgba(0,0,0, 0.5);
 }
 
 #menu-wrap {
@@ -327,6 +402,7 @@ body.menu-overlay-active #menu-wrap {
 	bottom: 0px;
 	left: 0px;
 	overflow-y: auto;
+	padding-bottom: 28px;
 }
 
 #container {
@@ -352,7 +428,8 @@ body.menu-overlay #container {
 }
 
 #content {
-	padding: 0px 30px;
+	margin: 0 auto;
+	padding: 0px 0px;
 }
 
 #footer-wrap {
@@ -431,21 +508,37 @@ body.menu-overlay #footer-wrap {
 
 /** Menu
 ------------------------------------------------------------ */
-
+/*
 #menu h3 {
 	font-size: 11px;
 	font-weight: 700;
 	line-height: 11px;
 	color: #3d3d3d;
 	text-transform: uppercase;
-	margin: 0px 10px;
-	padding: 3px 5px 8px;
+	margin: 8px 10px 0px;
+	padding: 10px 5px 9px;
+	border-top: 1px solid #d9d9d9;
+}
+*/
+
+#menu h3 {
+	margin: 7px 10px 14px;
+	height: 14px;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+#menu h3 span {
+	display: inline-block;
+	font: 700 12px/28px "Roboto Condensed", sans-serif;
+	color: #3d3d3d;
+	text-transform: uppercase;
+	padding: 0px 5px;
+	background: #fff;
 }
 
 #menu .profile {
-	margin: 0px 10px 5px;
-	padding: 14px 5px;
-	border-bottom: 1px solid #d9d9d9;
+	margin: 0px 10px 0px;
+	padding: 14px 5px 8px;
 }
 
 #menu .profile .avatar {
@@ -479,4 +572,141 @@ body.menu-overlay #footer-wrap {
 	font-size: 12px;
 	line-height: 14px;
 	color: #5f5f5f;
+}
+
+#menu ul.nav {
+	margin: 0px 10px;
+}
+
+#menu ul.nav li {}
+
+#menu ul.nav li a {
+	display: block;
+	position: relative;
+	font: 12px/28px sans-serif;
+	color: #3d3d3d;
+	padding-left: 32px;
+}
+
+#menu ul.nav li a:hover {
+	color: #fff;
+	text-decoration: none;
+	text-shadow: 0px -1px 0px rgba(0,0,0, 0.25);
+	background: #5f5f5f;
+}
+
+#menu ul.nav li a span.icon {
+	position: absolute;
+	top: 7px;
+	left: 9px;
+	display: block;
+	width: 14px;
+	height: 14px;
+	background: url(../images/icons_menu.png) no-repeat  0px -56px;
+	background-size: 28px 84px;
+}
+
+#menu ul.nav li a:hover span.icon {
+	background-position: -14px -56px;
+}
+
+#menu ul.nav li.home a span.icon { background-position: 0px 0px; }
+#menu ul.nav li.home a:hover span.icon { background-position: -14px 0px; }
+#menu ul.nav li.shop a span.icon { background-position: 0px -14px; }
+#menu ul.nav li.shop a:hover span.icon { background-position: -14px -14px; }
+#menu ul.nav li.messages a span.icon { background-position: 0px -28px; }
+#menu ul.nav li.messages a:hover span.icon { background-position: -14px -28px; }
+#menu ul.nav li.settings a span.icon { background-position: 0px -42px; }
+#menu ul.nav li.settings a:hover span.icon { background-position: -14px -42px; }
+
+#menu ul.nav li a span.count {
+	display: block;
+	position: absolute;
+	top: 6px;
+	right: 8px;
+	font-size: 12px;
+	line-height: 16px;
+	color: #fff;
+	padding: 0px 5px;
+	background: #D201BC;
+	border-radius: 2px;
+}
+
+#menu ul.nav li a:hover span.count {
+	background: #D201BC;
+	color: #fff;
+	text-decoration: none;
+	text-shadow: none;
+}
+
+#menu ul.nav li a:hover span.arrow {
+	position: absolute;
+	top: 7px;
+	right: 9px;
+	display: block;
+	width: 14px;
+	height: 14px;
+	background: url(../images/icons_menu.png) no-repeat -14px -70px;
+	background-size: 28px 84px;
+}
+
+#menu ul.nav li a img {
+	position: absolute;
+	top: 4px;
+	left: 6px;
+	display: block;
+	width: 20px;
+	height: auto;
+}
+
+.block {
+	margin: 0 auto;
+	width: 960px;
+}
+
+.block-subnav {
+	margin: auto 10px;
+	width: auto;
+	height: 48px;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+.block-subnav p.slogan {
+	display: block;
+	margin: 0px auto;
+	background: url(../images/slogan.png) no-repeat center center;
+	background-size: 285px 12px;
+	text-indent: -9999em;
+	width: 309px;
+	height: 48px;
+	padding: 0px;
+}
+
+.block-subnav .breadcrumbs {
+	display: none;
+	float: left;
+	margin-left: 5px;
+	font: 700 12px/48px "Roboto Condensed", sans-serif;
+	color: #5f5f5f;
+	text-transform: uppercase;
+}
+
+.block-subnav .breadcrumbs span {
+	display: inline-block;
+	padding-right: 9px;
+	color: #3d3d3d;
+}
+
+.block-subnav .breadcrumbs a {
+	color: #5f5f5f;
+}
+
+.block-subnav .breadcrumbs a:hover {
+	color: #D201BC;
+	text-decoration: none;
+}
+
+.block-subnav .breadcrumbs em {
+	font-style: normal;
+	padding: 0px 3px;
 }
