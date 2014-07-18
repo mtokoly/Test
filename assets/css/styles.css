@@ -703,7 +703,6 @@ body.menu-regular-min #subnav {
 
 #subnav p.slogan {
 	display: block;
-	display: none;
 	margin: 0px auto;
 	background: url(../images/slogan.png) no-repeat center center;
 	background-size: 285px 12px;
@@ -714,6 +713,7 @@ body.menu-regular-min #subnav {
 }
 
 #subnav .breadcrumbs {
+	display: none;
 	float: left;
 	margin-left: 5px;
 	font: 700 12px/46px "Roboto Condensed", sans-serif;
