@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+
+$loggedin = true;
+
+?><!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -18,7 +22,7 @@
 	<a href="/" class="logo">RIPPIN'</a>
 	<p class="slogan">The BMX, SKATE, SNOW &amp; SURF Marketplace</p>
 	<form class="search">
-		<input type="text" name="q" value="Search">
+		<input type="text" name="q" placeholder="Search" value="">
 		<input type="submit" value="Search">
 	</form>
 	<ul class="nav nav-cart">
@@ -37,7 +41,7 @@
 <!-- [END] Topbar -->
 
 <div id="menu-wrap"><div id="menu">
-	<?php include('sidebar.php'); ?>
+	<?php include('menu.php'); ?>
 </div></div>
 <!-- [END] Menu -->
 
