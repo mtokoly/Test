@@ -17,16 +17,20 @@ $loggedin = true;
 </head>
 <body class="menu-regular menu-regular-active menu-regular-min-inactive">
 
+<?php include('sprites.php'); ?>
+
 <div id="topbar-wrap"><div id="topbar">
 	<a href="javascript:void(0)" id="menulink"><span class="bars"></span><span class="arrow"></span></a>
 	<a href="/" class="logo">RIPPIN'</a>
 	<p class="slogan">The BMX, SKATE, SNOW &amp; SURF Marketplace</p>
 	<form class="search">
 		<input type="text" name="q" placeholder="Search" value="">
-		<input type="submit" value="Search">
+		<button type="submit">
+            <svg viewBox="0 0 32 32" class="icon icon-search"><use xlink:href="#icon-search"></use></svg>
+        </button>
 	</form>
 	<ul class="nav nav-cart">
-		<li class="cart"><a href="#">Cart <span class="count">1</span></a></li>
+		<li class="cart"><a href="#"><svg viewBox="0 0 32 32" class="icon-cart"><use xlink:href="#icon-cart"></use></svg><span class="count">1</span></a></li>
 	</ul>
 	<ul class="nav">
 		<li><a href="#">Home</a></li>
@@ -34,7 +38,7 @@ $loggedin = true;
 		<li><a href="#">Sell</a></li>
 	</ul>-
 	<ul class="nav-account">
-		<li class="messages"><a href="#">Messages</a></li>
+		<li class="messages"><a href="#"><svg viewBox="0 0 32 32" class="icon-mail"><use xlink:href="#icon-mail"></use></svg><span class="count">1</span></a></li>
 		<li class="profile"><a href="javascript:void(0)"><img src="./assets/images/dev/matt.jpg"></a></li>
 	</ul>
 </div></div>

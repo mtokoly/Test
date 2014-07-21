@@ -215,7 +215,7 @@ body.menu-regular-active.menu-regular-min-inactive #menulink span.arrow {
 #topbar form.search input[type=text]::-moz-placeholder { color: #ddd; }
 #topbar form.search input[type=text]:-ms-input-placeholder { color: #ddd; }
 
-#topbar form.search input[type=submit] {
+#topbar form.search button {
 	display: block;
 	position: absolute;
 	top: 0px;
@@ -224,12 +224,23 @@ body.menu-regular-active.menu-regular-min-inactive #menulink span.arrow {
 	width: 28px;
 	height: 28px;
 	margin: 0px;
-	padding: 0px;
+	padding: 8px;
+	background: none;
 	border: none;
+	box-sizing: border-box;
 	cursor: pointer;
 	outline: none;
-	background: url(../images/search.png) no-repeat center center;
-	background-size: 12px 12px;
+}
+
+#topbar form.search button .icon {
+	display: block;
+	width: 12px;
+	height: 12px;
+	fill: #ddd;
+}
+
+#topbar form.search button:hover .icon {
+	fill: #eee;
 }
 
 #topbar ul.nav {
@@ -298,9 +309,17 @@ body.menu-regular-active.menu-regular-min-inactive #menulink span.arrow {
 	position: relative;
 	width: 28px;
 	height: 28px;
-	background: #454545 url(../images/cart.png) no-repeat center center;
-	background-size: 16px 16px;
+	padding: 6px;
+	background: #454545;
+	box-sizing: border-box;
 	border-radius: 2px;
+}
+
+#topbar ul.nav-cart li a .icon-cart {
+	display: block;
+	width: 16px;
+	height: 16px;
+	fill: #fff;
 }
 
 #topbar ul.nav-cart li a:hover {
@@ -326,33 +345,41 @@ body.menu-regular-active.menu-regular-min-inactive #menulink span.arrow {
 	display: block;
 	width: 28px;
 	height: 28px;
-	background: #333;
+	background: #454545;
 	border-radius: 2px;
 }
 
 #topbar ul.nav-account li.messages a {
 	position: relative;
-	background: #454545 url(../images/messages.png) no-repeat center center;
-	background-size: 16px 16px;
+	padding: 6px;
+	box-sizing: border-box;
 }
 
 #topbar ul.nav-account li.messages a:hover {
 	box-shadow: inset 0px 1px 3px rgba(0,0,0, 0.25);
 }
 
+#topbar ul.nav-account li.messages a .icon-mail {
+	display: block;
+	width: 16px;
+	height: 16px;
+	fill: #fff;
+}
+
 #topbar ul.nav-cart li a span.count,
 #topbar ul.nav-account li a span.count {
 	display: block;
 	position: absolute;
-	top: -7px;
-	right: -7px;
-	height: 16px;
-	font: 12px/16px "Roboto", sans-serif;
+	top: -6px;
+	right: -6px;
+	height: 15px;
+	font: 11px/15px "Roboto", sans-serif;
 	color: #fff;
 	text-align: center;
 	text-indent: 0px;
-	padding: 0px 5px;
+	padding: 0px 4px;
 	background: #D201BC;
+	border-radius: 2px;
 }
 
 #topbar ul.nav-account li.profile a img {
@@ -600,29 +627,19 @@ body.menu-overlay #footer-wrap {
 	background: #5f5f5f;
 }
 
-#menu ul.nav li a span.icon {
+#menu ul.nav li a .icon {
 	position: absolute;
 	top: 7px;
 	left: 9px;
 	display: block;
 	width: 14px;
 	height: 14px;
-	background: url(../images/icons_menu.png) no-repeat  0px -56px;
-	background-size: 28px 84px;
+	fill: #5f5f5f;
 }
 
-#menu ul.nav li a:hover span.icon {
-	background-position: -14px -56px;
+#menu ul.nav li a:hover .icon {
+	fill: #fff;
 }
-
-#menu ul.nav li.home a span.icon { background-position: 0px 0px; }
-#menu ul.nav li.home a:hover span.icon { background-position: -14px 0px; }
-#menu ul.nav li.shop a span.icon { background-position: 0px -14px; }
-#menu ul.nav li.shop a:hover span.icon { background-position: -14px -14px; }
-#menu ul.nav li.messages a span.icon { background-position: 0px -28px; }
-#menu ul.nav li.messages a:hover span.icon { background-position: -14px -28px; }
-#menu ul.nav li.settings a span.icon { background-position: 0px -42px; }
-#menu ul.nav li.settings a:hover span.icon { background-position: -14px -42px; }
 
 #menu ul.nav li a span.count {
 	display: block;
@@ -644,15 +661,14 @@ body.menu-overlay #footer-wrap {
 	text-shadow: none;
 }
 
-#menu ul.nav li a:hover span.arrow {
+#menu ul.nav li a .arrow {
 	position: absolute;
-	top: 7px;
+	top: 8px;
 	right: 9px;
 	display: block;
-	width: 14px;
-	height: 14px;
-	background: url(../images/icons_menu.png) no-repeat -14px -70px;
-	background-size: 28px 84px;
+	width: 12px;
+	height: 12px;
+	fill: #fff;
 }
 
 #menu ul.nav li a img {
@@ -693,11 +709,12 @@ body.menu-overlay #footer-wrap {
 	height: 46px;
 	background: rgba(255,255,255, .95);
 	border-bottom: 1px solid #d9d9d9;
-	transition: all;
-	z-index: 2000;
+	transition: all 200ms;
+	z-index: 1980;
 }
 
-body.menu-regular-min #subnav {
+body.menu-regular-min #subnav,
+body.menu-regular-inactive #subnav {
 	left: 10px;
 }
 
