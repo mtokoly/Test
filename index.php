@@ -12,12 +12,15 @@ $loggedin = true;
     <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/rippin-icons.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body class="menu-regular menu-regular-active menu-regular-min-inactive">
 
 <?php include('sprites.php'); ?>
+
+
 
 <div id="topbar-wrap"><div id="topbar">
 	<a href="javascript:void(0)" id="menulink"><span class="bars"></span><span class="arrow"></span></a>
@@ -52,6 +55,15 @@ $loggedin = true;
 <div id="container">
 	<div id="content-wrap"><div id="content">
 		<?php include('content.php'); ?>
+		<style>
+		.icon-home {
+			font-size: 14px;
+			color: #fff;
+			padding: 20px;
+			background: #5f5f5f;
+		}
+		</style>
+		<span class="icon-home"></span>
 	</div></div>
 	<!-- [END] Content -->
 </div>
