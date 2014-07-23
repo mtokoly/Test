@@ -8,7 +8,7 @@ $loggedin = true;
     <meta charset="utf-8">
     <title>Test Site</title>
     <meta name="viewport" content="width=1024">
-    <!-- <link rel="shortcut icon" href="./assets/images/favicon.ico"> -->
+    <link rel="shortcut icon" href="./assets/images/favicon.ico">
     <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="./assets/css/normalize.css" />

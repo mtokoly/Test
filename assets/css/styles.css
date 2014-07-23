@@ -439,7 +439,7 @@ body.menu-overlay-active #menu-wrap {
 
 #container {
 	min-height: 100%;
-	margin-bottom: -52px;
+	margin-bottom: -50px;
 	padding-left: 220px;
 	transition: all 200ms;
 }
@@ -466,8 +466,8 @@ body.menu-overlay #container {
 
 #footer-wrap {
 	background: #fff;
-	border-top: 1px solid #d9d9d9;
-	height: 51px;
+	border-top: 0px solid #d9d9d9;
+	height: 50px;
 	padding-left: 220px;
 	transition: all 200ms;
 }
@@ -478,7 +478,9 @@ body.menu-overlay #footer-wrap {
 }
 
 #footer {
-	padding: 0px 30px;
+	border-top: 1px solid #d9d9d9;
+	margin: 0px 10px;
+	padding: 0px 4px;
 }
 
 #footer p {
