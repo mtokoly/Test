@@ -14,13 +14,9 @@ $loggedin = true;
     <link rel="stylesheet" href="./assets/css/normalize.css" />
     <link rel="stylesheet" href="./assets/css/rippin-icons.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body class="menu-regular menu-regular-active menu-regular-min-inactive">
-
-<?php include('sprites.php'); ?>
-
-
 
 <div id="topbar-wrap"><div id="topbar">
 	<a href="javascript:void(0)" id="menulink"><span class="bars"></span><span class="arrow"></span></a>
@@ -29,25 +25,59 @@ $loggedin = true;
 	<form class="search">
 		<input type="text" name="q" placeholder="Search" value="">
 		<button type="submit">
-            <svg viewBox="0 0 32 32" class="icon icon-search"><use xlink:href="#icon-search"></use></svg>
+            <span class="icon icon-search"></span>
         </button>
 	</form>
 	<ul class="nav nav-cart">
-		<li class="cart"><a href="#"><svg viewBox="0 0 32 32" class="icon-cart"><use xlink:href="#icon-cart"></use></svg><span class="count">1</span></a></li>
+		<li class="cart"><a href="#"><span class="icon icon-cart-alt"></span><span class="count">1</span></a></li>
 	</ul>
-	<ul class="nav">
+	<ul class="subnav">
 		<li><a href="#">Home</a></li>
 		<li><a href="#">Explore</a></li>
 		<li><a href="#">Sell</a></li>
 	</ul>-
-	<ul class="nav-account">
-		<li class="messages"><a href="#"><svg viewBox="0 0 32 32" class="icon-mail"><use xlink:href="#icon-mail"></use></svg><span class="count">1</span></a></li>
-		<li class="profile"><a href="javascript:void(0)"><img src="./assets/images/dev/matt.jpg"></a></li>
+	<ul class="nav nav-account">
+		<li class="messages"><a href="#"><span class="icon icon-mail"></span><span class="count">1</span></a></li>
+		<li class="profile">
+			<a href="javascript:void(0)"><img src="./assets/images/dev/matt.jpg"></a>
+			<div id="nav-profile">
+				<span class="arrow"></span>
+				<div class="chunk noborder">
+					<div class="profile">
+						<a href="#" class="avatar"><img src="./assets/images/dev/matt.jpg"></a>
+						<div class="info">
+							<a href="#" class="name">Matt Tokoly</a>
+							<div class="meta">@matt-tokoly</div>
+						</div>
+					</div>
+				</div>
+				<div class="chunk">
+					<ul>
+						<li><a href="#">View Your Shop</a></li>
+						<li><a href="#">Add New Item</a></li>
+						<li><a href="#">Shop Settings</a></li>
+					</ul>
+				</div>
+				<div class="chunk">
+					<ul>
+						<li><a href="#">Your Profile</a></li>
+						<li><a href="#">Messages</a></li>
+						<li><a href="#">Purchases</a></li>
+						<li><a href="#">Profile Settings</a></li>
+					</ul>
+				</div>
+				<div class="chunk">
+					<ul>
+						<li><a href="#">Sign Out</a></li>
+					</ul>
+				</div>
+			</div>
+		</li>
 	</ul>
 </div></div>
 <!-- [END] Topbar -->
 
-<div id="menu-wrap"><div id="menu">
+<div id="menu-wrap"><div id="menu" class="clearfix">
 	<?php include('menu.php'); ?>
 </div></div>
 <!-- [END] Menu -->
@@ -55,15 +85,6 @@ $loggedin = true;
 <div id="container">
 	<div id="content-wrap"><div id="content">
 		<?php include('content.php'); ?>
-		<style>
-		.icon-home {
-			font-size: 14px;
-			color: #fff;
-			padding: 20px;
-			background: #5f5f5f;
-		}
-		</style>
-		<span class="icon-home"></span>
 	</div></div>
 	<!-- [END] Content -->
 </div>
@@ -83,6 +104,7 @@ $loggedin = true;
 </div></div>
 <!-- [END] Footer -->
 
+<script src="./assets/js/jquery.menu-aim.js"></script>
 <script src="./assets/js/scripts.js"></script>
 </body>
 </html>

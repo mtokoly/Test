@@ -11,30 +11,40 @@
 </div>
 
 <ul class="nav">
-	<li class="home"><a href="#"><svg viewBox="0 0 32 32" class="icon icon-home"><use xlink:href="#icon-home"></use></svg> Recently Listed</a></li>
-	<li class="shop"><a href="#"><svg viewBox="0 0 32 32" class="icon icon-shop"><use xlink:href="#icon-shop"></use></svg> Your Shop</a></li>
-	<li class="messages"><a href="#"><svg viewBox="0 0 32 32" class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg> Messages <span class="count">1</span></a></li>
-	<li class="settings"><a href="#"><svg viewBox="0 0 32 32" class="icon icon-gear"><use xlink:href="#icon-gear"></use></svg> Account Settings</a></li>
+	<li class="home"><a href="#"><span class="icon icon-home"></span> Recently Listed</a></li>
+	<li class="shop"><a href="#"><span class="icon icon-shop"></span> Your Shop</a></li>
+	<li class="messages"><a href="#"><span class="icon icon-mail"></span> Messages <span class="count">1</span></a></li>
+	<li class="settings"><a href="#"><span class="icon icon-gear"></span> Account Settings</a></li>
 </ul>
 
 <h3><span>Categories</span></h3>
 
-<ul class="nav">
-	<li><a href="#">
-		<svg viewBox="0 0 32 32" class="icon icon-browse"><use xlink:href="#icon-browse"></use></svg>
-		BMX <svg viewBox="0 0 32 32" class="arrow icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg></a></li>
-	<li><a href="#">
-		<svg viewBox="0 0 32 32" class="icon icon-browse"><use xlink:href="#icon-browse"></use></svg>
-		SKATE <svg viewBox="0 0 32 32" class="arrow icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg></a></li>
-	<li><a href="#">
-		<svg viewBox="0 0 32 32" class="icon icon-browse"><use xlink:href="#icon-browse"></use></svg>
-		SNOW <svg viewBox="0 0 32 32" class="arrow icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg></a></li>
-	<li><a href="#">
-		<svg viewBox="0 0 32 32" class="icon icon-browse"><use xlink:href="#icon-browse"></use></svg>
-		SURF <svg viewBox="0 0 32 32" class="arrow icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg></a></li>
-	<li><a href="#">
-		<svg viewBox="0 0 32 32" class="icon icon-browse"><use xlink:href="#icon-browse"></use></svg>
-		ART <svg viewBox="0 0 32 32" class="arrow icon-arrow-right"><use xlink:href="#icon-arrow-right"></use></svg></a></li>
+<ul id="browse" class="nav overflow">
+	<li data-submenu-id="browse-bmx">
+		<a href="#"><span class="icon icon-browse"></span> BMX <span class="arrow icon-arrow-right"></span></a>
+		<div id="browse-bmx" class="popover">
+		</div>
+	</li>
+	<li data-submenu-id="browse-skate">
+		<a href="#"><span class="icon icon-browse"></span> SKATE <span class="arrow icon-arrow-right"></span></a>
+		<div id="browse-skate" class="popover">
+		</div>
+	</li>
+	<li data-submenu-id="browse-snow">
+		<a href="#"><span class="icon icon-browse"></span> SNOW <span class="arrow icon-arrow-right"></span></a>
+		<div id="browse-snow" class="popover">
+		</div>
+	</li>
+	<li data-submenu-id="browse-surf">
+		<a href="#"><span class="icon icon-browse"></span> SURF <span class="arrow icon-arrow-right"></span></a>
+		<div id="browse-surf" class="popover">
+		</div>
+	</li>
+	<li data-submenu-id="browse-art">
+		<a href="#"><span class="icon icon-browse"></span> ART <span class="arrow icon-arrow-right"></span></a>
+		<div id="browse-art" class="popover">
+		</div>
+	</li>
 </ul>
 
 <h3><span>Shops You Follow</span></h3>
